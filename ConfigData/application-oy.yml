@@ -1,0 +1,6 @@
+---
+spring:
+  profiles: oy
+  application:
+    name: oy
+words: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
