@@ -3,7 +3,7 @@
 spring:
   cloud:
     config:
-      uri: http://localhost:8001	# Expect the Spring Cloud Config server to be running on localhost, port 8001.  
+      uri: http://configserver:8001	# Expect the Spring Cloud Config server to be running on localhost, port 8001.
 server:
   port: ${PORT:${SERVER_PORT:0}}
 

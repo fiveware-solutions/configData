@@ -1,5 +1,7 @@
 ---
 spring:
+  application:
+    name: configserver
   cloud:
     config:
       server:

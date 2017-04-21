@@ -1,32 +1,15 @@
-load-balance:
-  build: .
-  restart: always
-  command: [nginx-debug, '-g', 'daemon off;']  
-  links:
-    - oy1:oy1
-    - oy2:oy2
-    - rcb1:rcb1
-    - rcb2:rcb2
-  ports:
-   - "80:80"
-oy1:
-   image: santander-oy:latest
-   restart: always
+config:
+   image: icaptor/config-server
    ports:
-    - "5000"
-oy2:
-   image: santander-oy:latest
-   restart: always
+      - "8001:8001"
+eureka:
+   image: icaptor/discovery
    ports:
-    - "5000"
-
-rcb1:
-   image: santander-rcb:latest
-   restart: always
+      - "8010:8010"
+rcb:
+   image: icaptor/santander-oy
    ports:
-    - "5001"
-rcb2:
-   image: santander-rcb:latest
-   restart: always
-   ports:
-    - "5001"
+      - "8081:8080"
+   links:
+      - eurekao
+      - config
