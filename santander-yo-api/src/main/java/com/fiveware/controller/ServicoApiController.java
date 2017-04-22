@@ -13,7 +13,10 @@ import com.google.common.base.Stopwatch;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +32,10 @@ import java.util.concurrent.TimeUnit;
 @RestController
 @RequestMapping("/api")
 public class ServicoApiController {
+
+
+    @Autowired
+    private LoadBalancerClient loadBalancerClient;
 
     Logger logger = LoggerFactory.getLogger(ServicoApiController.class);
 
@@ -132,6 +139,12 @@ public class ServicoApiController {
     @GetMapping(value = "/teste")
     public String teste(HttpServletRequest context) throws InterruptedException {
         logger.info("perfil {}", profileTeste);
+
+
+        ServiceInstance oy = loadBalancerClient.choose("oy");
+
+        System.out.println(oy.getUri());
+
         return profileTeste;
     }
 

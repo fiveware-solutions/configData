@@ -1,6 +1,0 @@
----
-spring:
-  profiles: rcb
-  application:
-    name: rcb
-words: bbbbb

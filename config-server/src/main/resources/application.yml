@@ -1,17 +1,17 @@
 ---
 spring:
   application:
-    name: configserver
+    name: configServer
   cloud:
     config:
       server:
         git:
           uri: https://github.com/fiveware-solutions/icaptor-api.git
-          searchPaths: ConfigData
+          searchPaths: configData
           username: valdisnei
           password: nicollas02
         # "native" is used when the native profile is active, for local tests with a classpath repo:
         native:
           searchLocations: classpath:offline-repository/
 server:
-  port: 8001
+  port: 8888

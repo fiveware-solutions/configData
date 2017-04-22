@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by valdisnei on 29/03/17.
  */
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/v2/api")
 public class ServicoApiController {
 
     Logger logger = LoggerFactory.getLogger(ServicoApiController.class);

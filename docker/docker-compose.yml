@@ -1,20 +1,28 @@
 eureka:
    image: icaptor/eureka-server
+   restart: always
    ports:
-      - "8010:8010"
+    - "8010:8010"
 config:
    image: icaptor/config-server
+   restart: always
    ports:
-      - "8001:8001"
+    - "8888:8888"
    links:
-      - eureka
-#rcb:
-#   image: icaptor/santander-rcb
-#   links:
-#      - eureka
-#      - config
+    - eureka
 #oy:
 #   image: icaptor/santander-oy
+#   restart: always
+#   ports:
+#    - "8081:8081"
+#   links:
+#    - eureka
+#    - config
+#rcb:
+#   image: icaptor/santander-rcb
+#   restart: always
+#   ports:
+#    - "8082:8082"
 #   links:
 #      - eureka
 #      - config
