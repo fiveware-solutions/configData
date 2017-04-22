@@ -3,38 +3,61 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.test</groupId>
-	<artifactId>common-eureka-server</artifactId>
+	<groupId>demo</groupId>
+    <artifactId>config-server</artifactId>
 	<version>1</version>
 	<packaging>jar</packaging>
 
-	<name>common-eureka-server</name>
-	<description>Eureka server suitable for use with most course labs</description>
+	<name>config-server</name>
+	<description>Spring Cloud Config Server suitable for use with most course labs</description>
 
 	<parent>
-		<groupId>com.fiveware.icaptor-api</groupId>
-		<artifactId>spring-cloud-microservice-icaptor</artifactId>
+		<groupId>com.fiveware</groupId>
+		<artifactId>icaptor-api</artifactId>
 		<version>0.1.0-SNAPSHOT</version>
 	</parent>
 
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>demo.Application</start-class>
+		<start-class>demo.ConfigServer</start-class>
 		<java.version>1.8</java.version>
+		<docker.image.prefix>icaptor</docker.image.prefix>
 	</properties>
 
+	<!-- We can't have two parent POMs, so use DependencyManagement 
+	to show Maven where the Spring Cloud dependencies are. -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-parent</artifactId>
+                <version>Camden.SR5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+    
 	<dependencies>
-	    <dependency>
-	        <groupId>org.springframework.cloud</groupId>
-	        <artifactId>spring-cloud-starter-eureka-server</artifactId>
-	    </dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
 		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 		<!-- Allow for automatic restarts when classpath contents change. -->
 	    <dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-devtools</artifactId>
 	        <optional>true</optional>
 	    </dependency>
+
 	</dependencies>
 
 	<build>

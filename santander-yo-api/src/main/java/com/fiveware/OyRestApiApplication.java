@@ -13,4 +13,4 @@ public class OyRestApiApplication {
 
 		SpringApplication.run(OyRestApiApplication.class, args);
 	}
-}
+}	
