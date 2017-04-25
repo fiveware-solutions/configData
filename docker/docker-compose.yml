@@ -10,14 +10,14 @@ config:
     - "8888:8888"
    links:
     - eureka
-#oy:
-#   image: icaptor/santander-oy
-#   restart: always
-#   ports:
-#    - "8081:8081"
-#   links:
-#    - eureka
-#    - config
+oy:
+   image: icaptor/santander-oy
+   restart: always
+   ports:
+    - "8081:8081"
+   links:
+    - eureka
+    - config
 #rcb:
 #   image: icaptor/santander-rcb
 #   restart: always
