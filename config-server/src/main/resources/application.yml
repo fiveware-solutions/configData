@@ -7,6 +7,9 @@ spring:
       server:
         git:
           uri: https://github.com/fiveware-solutions/icaptor-api.git
+          searchPaths: configData
+          username: valdisnei
+          password: nicollas02
         # "native" is used when the native profile is active, for local tests with a classpath repo:
         native:
           searchLocations: classpath:offline-repository/

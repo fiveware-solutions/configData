@@ -32,6 +32,7 @@
         <module>config-server</module>
         <module>santander-rcb-api</module>
         <module>santander-yo-api</module>
+        <module>api-gateway</module>
     </modules>
 
     <properties>

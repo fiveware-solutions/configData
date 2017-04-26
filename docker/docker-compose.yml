@@ -1,3 +1,8 @@
+api-gateway:
+   image: icaptor/api-gateway
+   restart: always
+   ports:
+    - "8088:8088"
 eureka:
    image: icaptor/eureka-server
    restart: always
