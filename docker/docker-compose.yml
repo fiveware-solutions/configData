@@ -1,5 +1,5 @@
 api-gateway:
-   image: icaptor/api-gateway
+   image: icaptor/gateway
    restart: always
    ports:
     - "8088:8088"
