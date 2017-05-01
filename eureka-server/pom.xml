@@ -34,7 +34,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>demo.Application</start-class>
+		<start-class>demo.EurekaServer</start-class>
 		<java.version>1.8</java.version>
 		<docker.image.prefix>icaptor</docker.image.prefix>
 	</properties>

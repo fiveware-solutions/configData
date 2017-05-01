@@ -30,7 +30,6 @@ import java.util.concurrent.TimeUnit;
  * Created by valdisnei on 29/03/17.
  */
 @RestController
-@RequestMapping("/api")
 public class ServicoApiController {
 
 

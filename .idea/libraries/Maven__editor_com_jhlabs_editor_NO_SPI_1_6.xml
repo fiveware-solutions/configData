@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: editor:com.jhlabs.editor:NO-SPI:1.6">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/editor/com.jhlabs.editor/1.6/com.jhlabs.editor-1.6-NO-SPI.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/editor/com.jhlabs.editor/1.6/com.jhlabs.editor-1.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/editor/com.jhlabs.editor/1.6/com.jhlabs.editor-1.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

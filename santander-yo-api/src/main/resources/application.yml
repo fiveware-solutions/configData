@@ -3,3 +3,10 @@
 spring:
   application:
     name: oy
+
+
+---
+# For simplicity, disable security when posting to bus/refresh:
+management:
+  security:
+    enabled: false
