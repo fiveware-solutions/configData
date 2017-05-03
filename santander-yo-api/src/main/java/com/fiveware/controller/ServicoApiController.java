@@ -10,6 +10,7 @@ import br.com.fiveware.commons.util.FormatacaoUtils;
 import com.fiveware.registroOnline.model.Response;
 import com.google.common.base.MoreObjects;
 import com.google.common.base.Stopwatch;
+import com.netflix.discovery.DiscoveryClient;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,8 +34,9 @@ import java.util.concurrent.TimeUnit;
 public class ServicoApiController {
 
 
-    @Autowired
-    private LoadBalancerClient loadBalancerClient;
+//    @Autowired
+//    private LoadBalancerClient loadBalancerClient;
+
 
     Logger logger = LoggerFactory.getLogger(ServicoApiController.class);
 
@@ -140,9 +142,9 @@ public class ServicoApiController {
         logger.info("perfil {}", profileTeste);
 
 
-        ServiceInstance oy = loadBalancerClient.choose("oy");
+//        ServiceInstance oy = loadBalancerClient.choose("oy");
 
-        System.out.println(oy.getUri());
+//        System.out.println(oy.getUri());
 
         return profileTeste;
     }

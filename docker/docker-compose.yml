@@ -1,28 +1,27 @@
-api-gateway:
-   image: icaptor/gateway
-   restart: always
-   ports:
-    - "8088:8088"
-eureka:
-   image: icaptor/eureka-server
-   restart: always
-   ports:
-    - "8010:8010"
-config:
-   image: icaptor/config-server
-   restart: always
-   ports:
-    - "8888:8888"
-   links:
-    - eureka
 #oy:
 #   image: icaptor/santander-oy
 #   restart: always
 #   ports:
 #    - "8081:8081"
+eureka:
+   image: icaptor/eureka-server
+#   restart: always
+   ports:
+    - "8010:8010"
+#   links:
+#    - oy
+config:
+   image: icaptor/config-server
+#   restart: always
+   ports:
+    - "8888:8888"
+   environment:
+    - SPRING_CLOUD_CONFIG_SERVER_GIT_URI=git@github.com:fiveware-solutions/configData.git
+#api-gateway:
+#   image: icaptor/lab-9-gateway-solution
+#   restart: always
 #   links:
 #    - eureka
-#    - config
 #rcb:
 #   image: icaptor/santander-rcb
 #   restart: always

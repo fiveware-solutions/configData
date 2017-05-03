@@ -1,18 +1,14 @@
 ---
 spring:
-  application:
-    name: configServer
   cloud:
     config:
       server:
         git:
           uri: git@github.com:fiveware-solutions/configData.git
-        # "native" is used when the native profile is active, for local tests with a classpath repo:
-
 server:
   port: 8888
 
-## For simplicity, disable security when posting to bus/refresh:
+# For simplicity, disable security when posting to bus/refresh:
 management:
   security:
     enabled: false

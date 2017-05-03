@@ -12,12 +12,13 @@
 	<description>Eureka server suitable for use with most course labs</description>
 
 
-	<parent>
-		<groupId>com.fiveware</groupId>
-		<artifactId>icaptor-api</artifactId>
-		<version>0.1.0-SNAPSHOT</version>
-	</parent>
 
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.1.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
 
 	<dependencyManagement>
 		<dependencies>
@@ -39,7 +40,6 @@
 		<docker.image.prefix>icaptor</docker.image.prefix>
 	</properties>
 
-
 	<dependencies>
 	    <dependency>
 	        <groupId>org.springframework.cloud</groupId>
@@ -60,31 +60,8 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-				<groupId>com.spotify</groupId>
-				<artifactId>docker-maven-plugin</artifactId>
-				<version>${docker.plugin.version}</version>
-				<executions>
-					<execution>
-						<phase>package</phase>
-						<goals>
-							<goal>build</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					<dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-					<resources>
-						<resource>
-							<targetPath>/</targetPath>
-							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}.jar</include>
-						</resource>
-					</resources>
-				</configuration>
-			</plugin>
 		</plugins>
 	</build>
+
 
 </project>

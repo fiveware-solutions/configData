@@ -1,14 +1,16 @@
-# Properties active for ALL profiles:
 ---
 spring:
+  application:
+    name: oy
   cloud:
     config:
-      uri: http://localhost:8888	# Expect the Spring Cloud Config server to be running on localhost, port 8001.
+      uri: http://localhost:8888
 server:
-  port: ${PORT:${SERVER_PORT:0}}   # Select any available port if neither port nor server port are specified.
+  port: ${PORT:${SERVER_PORT:0}}
 
-# Allow Eureka to recognize two apps of the same type on the same host as separate instances:
 eureka:
-  instance:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8010/eureka/
     metadataMap:
       instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
