@@ -1,9 +1,0 @@
-# Properties active for ALL profiles:
-spring:
-  application:
-    name: rcb
-
-## Allow Eureka to recognize two apps of the same type on the same host as separate instances:
-eureka:
-  instance:
-    instanceId: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
