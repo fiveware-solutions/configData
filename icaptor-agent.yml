@@ -1,0 +1,92 @@
+server.port: ${PORT:${SERVER_PORT:8087}}
+
+spring.http:
+    multipart:
+        max-file-size: 1024MB
+        max-request-size: 1024MB
+
+icaptor:
+  elasticSearch: http://54.232.36.27:9200
+  broker:
+    user: guest
+    pass: guest
+    host: 34.231.45.229
+    port: 30001
+    queue-send-schedular-time: 5000 #milli second
+
+  metrics-schedulle-time: 5000 #milli second
+
+io:
+  worker.dir: ${user.home}/.icaptor-agent
+  worker.file: ${user.home}/.icaptor-out-file
+  file-read: ${user.home}/.icaptor-read-file
+
+management:
+  security.enabled: false
+  context-path: /management
+
+
+#info.app:
+#  name: @project.name@
+#  description: @project.description@
+#  build: @project.version@
+#  java.version: @java.specification.version@
+
+endpoints:
+  info:
+    enabled: true
+    id: information
+---
+
+
+spring.http:
+    multipart:
+        max-file-size: 4024MB
+        max-request-size: 4024MB
+spring:
+  profiles: dev
+
+icaptor:
+  elasticSearch: http://54.232.36.27:9200
+
+  broker:
+    user: guest
+    pass: guest
+    host: localhost
+    port: 15672
+    queue-send-schedular-time: 5000 #milli second
+
+  metrics-schedulle-time: 5000 #milli second
+io:
+  worker.dir: ${user.home}/.icaptor-agent
+  worker.file: ${user.home}/.icaptor-out-file
+  file-read: ${user.home}/.icaptor-read-file
+
+
+
+
+management:
+  security.enabled: false
+  context-path: /management
+
+
+#info.app:
+#  name: project.name
+#  description: @project.description@
+#  build: @project.version@
+#  java.version: @java.specification.version@
+
+endpoints:
+  info:
+    enabled: true
+    id: information
+
+
+# BANNER
+banner.charset: UTF-8 # Banner file encoding.
+banner.location: classpath:banner.txt # Banner file location.
+banner.image.location: classpath:banner.gif # Banner image file location (jpg/png can also be used).
+banner.image.width: # Width of the banner image in chars (default 76)
+banner.image.height: # Height of the banner image in chars (default based on image height)
+banner.image.margin: # Left hand image margin in chars (default 2)
+banner.image.invert: # If images should be inverted for dark terminal themes (default false)

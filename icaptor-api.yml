@@ -1,0 +1,11 @@
+server:
+  name: icaptor-web-server
+  host: localhost
+  port: 8014
+
+
+icaptor:
+  seguranca:
+    enable-https: false
+  origin-permitida: http://localhost:4200
+  elasticSearch: http://54.232.36.27:9200
