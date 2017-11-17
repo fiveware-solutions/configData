@@ -111,4 +111,4 @@ spring:
 
   data.rest.detection-strategy: annotated
   profiles:
-    active: stage
+    active: qa
