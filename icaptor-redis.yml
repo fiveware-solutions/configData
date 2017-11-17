@@ -1,5 +1,5 @@
 spring:
-  profiles.active: stage
+  profiles.active: local
 #logging:
 #  config: classpath:logback.xml
 ---
