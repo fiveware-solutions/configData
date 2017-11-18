@@ -15,6 +15,7 @@ icaptor:
     host: localhost
     port: 30001
     queue-send-schedular-time: 5000 #milli second
+  task-resolver.scheduller-time: 5000 #milli second
 
 eureka:
   client:
@@ -53,3 +54,4 @@ icaptor:
     host: icaptor-broker
     port: 15672
     queue-send-schedular-time: 5000 #milli second
+  task-resolver.scheduller-time: 5000 #milli second
