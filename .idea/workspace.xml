@@ -4,9 +4,7 @@
     <option name="SYNC_PROJECT_BEFORE_BUILD" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53518e6d-b7da-42bc-b537-acfbb42980c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icaptor-redis.yml" afterPath="$PROJECT_DIR$/icaptor-redis.yml" />
-    </list>
+    <list default="true" id="53518e6d-b7da-42bc-b537-acfbb42980c5" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,17 +14,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="icaptor-monitoring.yaml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="icaptor-monitoring.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/icaptor-monitoring.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+            <state relative-caret-position="69">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="33" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="icaptor-redis.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="icaptor-redis.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/icaptor-redis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="128">
@@ -306,12 +304,12 @@
       <option name="presentableId" value="Default" />
       <updated>1510960566411</updated>
       <workItem from="1510960568166" duration="4250000" />
-      <workItem from="1511003677032" duration="2064000" />
+      <workItem from="1511003677032" duration="2432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6314000" />
+    <option name="totallyTimeSpent" value="6682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-87" width="1920" height="1080" extended-state="0" />
@@ -429,18 +427,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icaptor-monitoring.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="53" column="22" lean-forward="false" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/icaptor-redis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="8" column="26" lean-forward="true" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/icaptor-monitoring.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="33" selection-end-column="25" />
           <folding />
         </state>
       </provider>

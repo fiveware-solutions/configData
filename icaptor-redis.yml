@@ -3,6 +3,12 @@ spring:
 #logging:
 #  config: classpath:logback.xml
 ---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://18.231.43.79:8761/eureka}
+  instance:
+    preferIpAddress: true
 spring:
   profiles: stage
   redis:
@@ -13,6 +19,12 @@ server:
   servlet-path: /
 
 ---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
 spring:
   profiles: local
   redis:
@@ -23,6 +35,12 @@ server:
   servlet-path: /
 
 ---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://18.231.43.79:8761/eureka}
+  instance:
+    preferIpAddress: true
 spring:
   profiles: qa
   redis:
