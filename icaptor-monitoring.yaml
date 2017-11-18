@@ -15,7 +15,23 @@ icaptor:
     host: localhost
     port: 30001
     queue-send-schedular-time: 5000 #milli second
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
+  instance:
+    preferIpAddress: true
+
 ---
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
+  instance:
+    preferIpAddress: true
+
 spring:
   profiles:
     active: qa
