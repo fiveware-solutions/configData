@@ -5,6 +5,13 @@ spring.http:
         max-file-size: 1024MB
         max-request-size: 1024MB
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
 icaptor:
   server:
     name: icaptor-server
@@ -46,6 +53,13 @@ spring:
         web-allow-others: true
 
 ---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://18.231.43.79:8761/eureka}
+  instance:
+    preferIpAddress: true
+
 server.port: 8020
 
 spring.http:
@@ -60,7 +74,7 @@ icaptor:
   broker:
     user: guest
     pass: guest
-    host: icaptor-broker
+    host: 16.231.43.79
     port: 30001
     queue.send.schedularTime: 5000 #milli second
 
