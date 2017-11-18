@@ -16,7 +16,7 @@ icaptor:
     host: localhost
     port: 15672
     queue-send-schedular-time: 5000 #milli second
-  elasticSearch: http://54.232.36.27:9200
+  elasticSearch: http://54.232.136.130:9200
 
 eureka:
   client:
@@ -26,13 +26,21 @@ eureka:
     preferIpAddress: true
 
 ---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
+  instance:
+    preferIpAddress: true
+
 server:
   name: icaptor-server
   host: localhost
   port: 8082
 
 spring:
-  profiles: qa
+  profiles:
+    active: qa
 
 io:
   worker.dir: ${user.home}/.icaptor-agent
@@ -47,12 +55,4 @@ icaptor:
     host: icaptor-broker
     port: 15672
     queue-send-schedular-time: 5000 #milli second
-  elasticSearch: http://54.232.36.27:9200
-
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
-  instance:
-    preferIpAddress: true
+  elasticSearch: http://54.232.136.130:9200
