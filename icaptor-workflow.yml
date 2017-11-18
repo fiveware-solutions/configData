@@ -46,9 +46,7 @@ spring:
         web-allow-others: true
 
 ---
-
 server.port: 8020
-
 
 spring.http:
     multipart:
@@ -62,7 +60,7 @@ icaptor:
   broker:
     user: guest
     pass: guest
-    host: localhost
+    host: icaptor-broker
     port: 30001
     queue.send.schedularTime: 5000 #milli second
 
@@ -95,4 +93,4 @@ spring:
         trace: false
         web-allow-others: true
   profiles:
-    active: dev
+    active: qa
