@@ -6,7 +6,7 @@ spring:
 spring:
   profiles: stage
   redis:
-    hostname: 54.232.36.27
+    hostname: 18.231.43.79
     port: 6379
 server:
   port : 8086
@@ -24,9 +24,9 @@ server:
 
 ---
 spring:
-  profiles: test
+  profiles: qa
   redis:
-      hostname: localhost
+      hostname: 18.231.43.79
       port: 6379
 server:
   port : 8086
