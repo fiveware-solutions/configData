@@ -8,18 +8,17 @@ io:
   worker.file: ${HOME}/.icaptor-out-file
   file-read: ${HOME}/.icaptor-read-file
 
-
 icaptor:
   broker:
     user: guest
     pass: guest
-    host: 34.231.45.229
+    host: localhost
     port: 30001
     queue-send-schedular-time: 5000 #milli second
 ---
 spring:
   profiles:
-    active: dev
+    active: qa
 server:
   name: icaptor-monitoring
   host: localhost
@@ -31,10 +30,10 @@ io:
   file-read: ${HOME}/.icaptor-read-file
 
 icaptor:
-  elasticSearch: http://54.232.36.27:9200
+  elasticSearch: http://54.232.136.130:9200
   broker:
     user: guest
     pass: guest
-    host: localhost
+    host: icaptor-broker
     port: 15672
     queue-send-schedular-time: 5000 #milli second
