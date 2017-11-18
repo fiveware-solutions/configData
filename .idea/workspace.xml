@@ -4,7 +4,9 @@
     <option name="SYNC_PROJECT_BEFORE_BUILD" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="53518e6d-b7da-42bc-b537-acfbb42980c5" name="Default" comment="" />
+    <list default="true" id="53518e6d-b7da-42bc-b537-acfbb42980c5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icaptor-persistence.yml" afterPath="$PROJECT_DIR$/icaptor-persistence.yml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,11 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="icaptor-workflow.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="icaptor-workflow.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/icaptor-workflow.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="332">
-              <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+              <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icaptor-persistence.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/icaptor-persistence.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -38,11 +50,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/eureka-server.yml" />
-        <option value="$PROJECT_DIR$/icaptor-persistence.yml" />
         <option value="$PROJECT_DIR$/icaptor-cloud.yaml" />
         <option value="$PROJECT_DIR$/icaptor-api.yml" />
         <option value="$PROJECT_DIR$/icaptor-monitoring.yaml" />
         <option value="$PROJECT_DIR$/icaptor-workflow.yml" />
+        <option value="$PROJECT_DIR$/icaptor-persistence.yml" />
       </list>
     </option>
   </component>
@@ -253,12 +265,12 @@
       <option name="presentableId" value="Default" />
       <updated>1510960566411</updated>
       <workItem from="1510960568166" duration="4250000" />
-      <workItem from="1511003677032" duration="585000" />
+      <workItem from="1511003677032" duration="951000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4835000" />
+    <option name="totallyTimeSpent" value="5201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-87" width="1920" height="1080" extended-state="0" />
@@ -352,14 +364,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icaptor-persistence.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="113" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/icaptor-cloud.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="245">
@@ -379,7 +383,15 @@
     <entry file="file://$PROJECT_DIR$/icaptor-workflow.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="332">
-          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <caret line="57" column="24" lean-forward="false" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/icaptor-persistence.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="98" column="9" lean-forward="true" selection-start-line="98" selection-start-column="9" selection-end-line="98" selection-end-column="9" />
           <folding />
         </state>
       </provider>

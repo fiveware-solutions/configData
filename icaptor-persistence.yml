@@ -92,7 +92,7 @@ eureka:
 
 spring:
   datasource:
-    url: jdbc:mysql://icaptor-mysql:3306/icaptor?createDatabaseIfNotExist=true&useSSL=false
+    url: jdbc:mysql://18.231.43.79:3306/icaptor?createDatabaseIfNotExist=true&useSSL=false
     username: root
     password: root
     driverClassName: com.mysql.jdbc.Driver
