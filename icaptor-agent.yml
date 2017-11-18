@@ -37,14 +37,19 @@ endpoints:
     enabled: true
     id: information
 ---
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://18.231.43.79:8761/eureka}
+  instance:
+    preferIpAddress: true
 
 spring.http:
     multipart:
         max-file-size: 4024MB
         max-request-size: 4024MB
 spring:
-  profiles: dev
+  profiles: qa
 
 icaptor:
   elasticSearch: http://54.232.36.27:9200
@@ -52,7 +57,7 @@ icaptor:
   broker:
     user: guest
     pass: guest
-    host: localhost
+    host: 18.231.43.79
     port: 15672
     queue-send-schedular-time: 5000 #milli second
 
