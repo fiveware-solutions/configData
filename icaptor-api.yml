@@ -10,7 +10,20 @@ icaptor:
   origin-permitida: http://localhost:4200
   elasticSearch: http://54.232.136.130:9200
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
+  instance:
+    preferIpAddress: true
 ---
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
+  instance:
+    preferIpAddress: true
 server:
   name: icaptor-web-server
   host: localhost
