@@ -29,7 +29,7 @@ eureka:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://18.231.43.79:8761/eureka}
   instance:
     preferIpAddress: true
 
@@ -51,7 +51,7 @@ icaptor:
   broker:
     user: guest
     pass: guest
-    host: icaptor-broker
+    host: 18.231.43.79
     port: 15672
     queue-send-schedular-time: 5000 #milli second
   task-resolver.scheduller-time: 5000 #milli second
