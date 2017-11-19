@@ -1,4 +1,13 @@
 server.port: ${PORT:${SERVER_PORT:8087}}
+spring:
+  profiles: qa
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: false
 
 spring.http:
     multipart:
