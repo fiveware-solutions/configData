@@ -8,9 +8,6 @@ server:
 server:
   port: ${PORT:8085}
 
-spring:
-  profiles: local
-
 eureka:
   client:
     serviceUrl:
@@ -38,7 +35,7 @@ spring:
     date-format: dd/MM/yyyy
 
   data.rest.detection-strategy: annotated
-
+  profiles: local
 
 flyway:
     enabled: "true"
