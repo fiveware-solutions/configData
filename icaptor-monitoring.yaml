@@ -1,5 +1,36 @@
 spring:
-  profiles.active: local
+  profiles.active: dev
+
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: false
+
+spring:
+  profiles: dev
+
+server:
+  name: icaptor-monitoring
+  host: localhost
+  port: 8090
+
+io:
+  worker.dir: ${HOME}/.icaptor-agent
+  worker.file: ${HOME}/.icaptor-out-file
+  file-read: ${HOME}/.icaptor-read-file
+
+icaptor:
+  broker:
+    user: guest
+    pass: guest
+    host: localhost
+    port: 15672
+    queue-send-schedular-time: 5000 #milli second
+  task-resolver.scheduller-time: 5000 #milli second
+
 ---
 eureka:
   client:
