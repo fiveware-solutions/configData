@@ -1,16 +1,19 @@
+spring:
+  profiles.active: local
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: false
+
 server.port: 8020
 
 spring.http:
     multipart:
         max-file-size: 1024MB
         max-request-size: 1024MB
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: true
 
 icaptor:
   server:
@@ -19,8 +22,7 @@ icaptor:
   broker:
     user: guest
     pass: guest
-    host: 34.231.45.229
-    port: 30001
+    host: localhost
     queue.send.schedularTime: 5000 #milli second
 
 io:
@@ -51,6 +53,7 @@ spring:
       settings:
         trace: false
         web-allow-others: true
+  profiles: local
 
 ---
 eureka:
@@ -75,7 +78,7 @@ icaptor:
     user: guest
     pass: guest
     host: 16.231.43.79
-    port: 30001
+    port: 15672
     queue.send.schedularTime: 5000 #milli second
 
 io:
@@ -106,5 +109,4 @@ spring:
       settings:
         trace: false
         web-allow-others: true
-  profiles:
-    active: qa
+  profiles: qa
