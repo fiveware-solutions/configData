@@ -1,7 +1,13 @@
+spring:
+  profiles.active: local
+
 server:
   port: ${PORT:8085}
 
 ---
+server:
+  port: ${PORT:8085}
+
 spring:
   profiles: local
 
@@ -48,6 +54,9 @@ endpoints:
     id: information
 
 ---
+server:
+  port: ${PORT:8085}
+
 eureka:
   client:
     serviceUrl:
