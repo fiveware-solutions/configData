@@ -1,5 +1,27 @@
 spring:
-  profiles.active: local
+  profiles.active: dev
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: false
+
+spring:
+  profiles: dev
+
+server:
+  name: icaptor-web-server
+  host: localhost
+  port: 8014
+
+
+icaptor:
+  seguranca:
+    enable-https: false
+  origin-permitida: http://localhost:4200
+  elasticSearch: http://54.232.136.130:9200
 ---
 eureka:
   client:
