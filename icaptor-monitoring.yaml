@@ -1,3 +1,16 @@
+spring:
+  profiles.active: local
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: false
+
+spring:
+  profiles: local
+
 server:
   name: icaptor-monitoring
   host: localhost
@@ -17,12 +30,6 @@ icaptor:
     queue-send-schedular-time: 5000 #milli second
   task-resolver.scheduller-time: 5000 #milli second
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: true
 
 ---
 
