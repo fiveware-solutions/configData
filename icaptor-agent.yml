@@ -6,7 +6,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
   instance:
     preferIpAddress: false
 
@@ -20,7 +20,7 @@ icaptor:
   broker:
     user: guest
     pass: guest
-    host: localhost
+    host: icaptor-broker
     port: 15672
     queue-send-schedular-time: 5000 #milli second
 
