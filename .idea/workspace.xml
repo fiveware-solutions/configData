@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="53518e6d-b7da-42bc-b537-acfbb42980c5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icaptor-agent.yml" afterPath="$PROJECT_DIR$/icaptor-agent.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icaptor-persistence.yml" afterPath="$PROJECT_DIR$/icaptor-persistence.yml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +27,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="icaptor-persistence.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="icaptor-persistence.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/icaptor-persistence.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
+            <state relative-caret-position="521">
+              <caret line="77" column="14" lean-forward="false" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -46,11 +47,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="icaptor-agent.yml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="icaptor-agent.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/icaptor-agent.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -105,8 +106,8 @@
         <option value="$PROJECT_DIR$/icaptor-workflow.yml" />
         <option value="$PROJECT_DIR$/icaptor-api.yml" />
         <option value="$PROJECT_DIR$/icaptor-monitoring.yaml" />
-        <option value="$PROJECT_DIR$/icaptor-persistence.yml" />
         <option value="$PROJECT_DIR$/icaptor-agent.yml" />
+        <option value="$PROJECT_DIR$/icaptor-persistence.yml" />
       </list>
     </option>
   </component>
@@ -317,12 +318,12 @@
       <option name="presentableId" value="Default" />
       <updated>1510960566411</updated>
       <workItem from="1510960568166" duration="4250000" />
-      <workItem from="1511003677032" duration="6863000" />
+      <workItem from="1511003677032" duration="7277000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11113000" />
+    <option name="totallyTimeSpent" value="11527000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="-87" width="1920" height="1080" extended-state="0" />
@@ -440,14 +441,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icaptor-persistence.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="50" column="19" lean-forward="false" selection-start-line="50" selection-start-column="19" selection-end-line="50" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/icaptor-redis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -458,8 +451,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/icaptor-agent.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/icaptor-persistence.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="77" column="14" lean-forward="false" selection-start-line="77" selection-start-column="14" selection-end-line="77" selection-end-column="14" />
           <folding />
         </state>
       </provider>
