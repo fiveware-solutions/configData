@@ -6,12 +6,12 @@ spring.http:
         max-request-size: 1024MB
 
 icaptor:
-  elasticSearch: http://54.232.36.27:9200
+  elasticSearch: http://54.232.136.130:9200
   broker:
     user: guest
     pass: guest
-    host: 34.231.45.229
-    port: 30001
+    host: localhost
+    port: 15672
     queue-send-schedular-time: 5000 #milli second
 
   metrics-schedulle-time: 5000 #milli second
