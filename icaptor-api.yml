@@ -1,3 +1,16 @@
+spring:
+  profiles.active: local
+---
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: false
+
+spring:
+  profiles: local
+
 server:
   name: icaptor-web-server
   host: localhost
@@ -10,12 +23,6 @@ icaptor:
   origin-permitida: http://localhost:4200
   elasticSearch: http://54.232.136.130:9200
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: true
 ---
 
 eureka:
@@ -24,6 +31,7 @@ eureka:
       defaultZone: ${EUREKA_URI:http://18.231.43.79:8761/eureka}
   instance:
     preferIpAddress: true
+
 server:
   name: icaptor-web-server
   host: localhost
@@ -32,9 +40,8 @@ server:
 icaptor:
   seguranca:
     enable-https: false
-  origin-permitida: http://localhost:4200
+  origin-permitida: http://18.231.43.79
   elasticSearch: http://54.232.136.130:9200
 
 spring:
-  profiles:
-    active: qa
+  profiles: qa

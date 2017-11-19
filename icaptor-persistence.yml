@@ -1,9 +1,6 @@
 spring:
   profiles.active: local
 
-server:
-  port: ${PORT:8085}
-
 ---
 server:
   port: ${PORT:8085}
