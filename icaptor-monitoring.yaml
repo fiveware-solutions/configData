@@ -67,7 +67,7 @@ icaptor:
 eureka:
   client:
     serviceUrl:
-      defaultZone: ${EUREKA_URI:http://18.231.43.79:8761/eureka}
+      defaultZone: ${EUREKA_URI:http://54.232.96.63:8761/eureka}
   instance:
     preferIpAddress: true
 
@@ -85,11 +85,11 @@ io:
   file-read: ${HOME}/.icaptor-read-file
 
 icaptor:
-  elasticSearch: http://54.232.136.130:9200
+  elasticSearch: http://54.232.96.63:9200
   broker:
     user: guest
     pass: guest
-    host: 18.231.43.79
+    host: 54.232.96.63
     port: 15672
     queue-send-schedular-time: 5000 #milli second
   task-resolver.scheduller-time: 5000 #milli second
