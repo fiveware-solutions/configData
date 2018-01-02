@@ -52,7 +52,6 @@ server:
   port: 8085
 
 spring:
-  profile: votorantim
   datasource:
     url: jdbc:mysql://icaptor-mysql:3306/icaptor?createDatabaseIfNotExist=true&useSSL=false
     username: root
@@ -73,6 +72,7 @@ spring:
     date-format: dd/MM/yyyy
 
   data.rest.detection-strategy: annotated
+  profile: dev
 
 flyway:
     enabled: "true"
