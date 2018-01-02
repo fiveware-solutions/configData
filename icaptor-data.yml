@@ -34,11 +34,11 @@ management:
   context-path: /management
 
 
-info.app:
-  name: @project.name@
-  description: @project.description@
-  build: @project.version@
-  java.version: @java.specification.version@
+#info.app:
+#  name: @project.name@
+#  description: @project.description@
+#  build: @project.version@
+#  java.version: @java.specification.version@
 
 endpoints:
   info:
@@ -82,12 +82,12 @@ management:
   security.enabled: false
   context-path: /management
 
-
-info.app:
-  name: @project.name@
-  description: @project.description@
-  build: @project.version@
-  java.version: @java.specification.version@
+#
+#info.app:
+#  name: @project.name@
+#  description: @project.description@
+#  build: @project.version@
+#  java.version: @java.specification.version@
 
 endpoints:
   info:
