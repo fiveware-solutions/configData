@@ -72,7 +72,7 @@ spring:
     date-format: dd/MM/yyyy
 
   data.rest.detection-strategy: annotated
-  profile: dev
+  profile: votorantim
 
 flyway:
     enabled: "true"
