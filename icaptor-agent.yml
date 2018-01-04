@@ -1,14 +1,4 @@
-server.port: ${PORT:${SERVER_PORT:8087}}
----
-spring:
-  profiles: dev
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: false
+server.port: ${PORT:${SERVER_PORT:0}}
 
 spring.http:
     multipart:
@@ -16,7 +6,65 @@ spring.http:
         max-request-size: 1024MB
 
 icaptor:
-  elasticSearch: http://54.232.96.63:9200
+  server:
+    name: icaptor-server
+    host: http://localhost:8082
+    ip: 127.0.0.1
+  data-source:
+    host: http://localhost:8085
+  elasticSearch: http://52.67.200.181:9200
+  broker:
+    user: guest
+    pass: guest
+    host: 52.67.200.181
+    port: 30001
+    queue-send-schedular-time: 5000 #milli second
+  redis: http://52.67.200.181:8086
+
+  metrics-schedulle-time: 5000 #milli second
+
+io:
+  worker.dir: ${user.home}/.icaptor-agent
+  worker.file: ${user.home}/.icaptor-out-file
+  file-read: ${user.home}/.icaptor-read-file
+  bot.extension.file: .jar
+
+management:
+  security.enabled: false
+  context-path: /management
+
+
+info.app:
+  name: @project.name@
+  description: @project.description@
+  build: @project.version@
+  java.version: @java.specification.version@
+
+endpoints:
+  info:
+    enabled: true
+    id: information
+---
+server.port: ${PORT:${SERVER_PORT:0}}
+
+
+spring.http:
+    multipart:
+        max-file-size: 4024MB
+        max-request-size: 4024MB
+spring:
+  profiles: dev
+
+icaptor:
+  server:
+    name: icaptor-server
+    host: localhost:8082
+    ip: localhost
+  data-source:
+    host: http://localhost:8085
+  elasticSearch: http://52.67.200.181:9200
+  redis: http://localhost:8086
+
   broker:
     user: guest
     pass: guest
@@ -25,96 +73,65 @@ icaptor:
     queue-send-schedular-time: 5000 #milli second
 
   metrics-schedulle-time: 5000 #milli second
-
 io:
   worker.dir: ${user.home}/.icaptor-agent
   worker.file: ${user.home}/.icaptor-out-file
   file-read: ${user.home}/.icaptor-read-file
+  bot.extension.file: .jar
+
+
 
 management:
   security.enabled: false
   context-path: /management
 
 
-#info.app:
-#  name: @project.name@
-#  description: @project.description@
-#  build: @project.version@
-#  java.version: @java.specification.version@
+info.app:
+  name: @project.name@
+  description: @project.description@
+  build: @project.version@
+  java.version: @java.specification.version@
 
 endpoints:
   info:
     enabled: true
     id: information
+
+
+# BANNER
+banner.charset: UTF-8 # Banner file encoding.
+banner.location: classpath:banner.txt # Banner file location.
+banner.image.location: classpath:banner.gif # Banner image file location (jpg/png can also be used).
+banner.image.width: # Width of the banner image in chars (default 76)
+banner.image.height: # Height of the banner image in chars (default based on image height)
+banner.image.margin: # Left hand image margin in chars (default 2)
+banner.image.invert: # If images should be inverted for dark terminal themes (default false)
+
 ---
-spring:
-  profiles: local
+server.port: ${PORT:${SERVER_PORT:0}}
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
-  instance:
-    preferIpAddress: false
-
-spring.http:
-    multipart:
-        max-file-size: 1024MB
-        max-request-size: 1024MB
-
-icaptor:
-  elasticSearch: http://54.232.96.63:9200
-  broker:
-    user: guest
-    pass: guest
-    host: icaptor-broker
-    port: 15672
-    queue-send-schedular-time: 5000 #milli second
-
-  metrics-schedulle-time: 5000 #milli second
-
-io:
-  worker.dir: ${user.home}/.icaptor-agent
-  worker.file: ${user.home}/.icaptor-out-file
-  file-read: ${user.home}/.icaptor-read-file
-
-management:
-  security.enabled: false
-  context-path: /management
-
-
-#info.app:
-#  name: @project.name@
-#  description: @project.description@
-#  build: @project.version@
-#  java.version: @java.specification.version@
-
-endpoints:
-  info:
-    enabled: true
-    id: information
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://54.232.96.63:8761/eureka}
-  instance:
-    preferIpAddress: false
 
 spring.http:
     multipart:
         max-file-size: 4024MB
         max-request-size: 4024MB
 spring:
-  profiles: qa
+  profiles: votorantim
 
 icaptor:
-  elasticSearch: http://54.232.96.63:9200
+  server:
+    name: icaptor-server
+    host: 52.67.141.87:8082
+    ip: localhost
+  data-source:
+    host: http://52.67.141.87:8085
+  elasticSearch: http://52.67.200.181:9200
+  redis: http://52.67.141.87:8086
 
   broker:
     user: guest
     pass: guest
-    host: 54.232.96.63
+    host: 52.67.200.181
     port: 15672
     queue-send-schedular-time: 5000 #milli second
 
@@ -123,7 +140,7 @@ io:
   worker.dir: ${user.home}/.icaptor-agent
   worker.file: ${user.home}/.icaptor-out-file
   file-read: ${user.home}/.icaptor-read-file
-
+  bot.extension.file: .jar
 
 
 
@@ -133,7 +150,7 @@ management:
 
 
 #info.app:
-#  name: project.name
+#  name: @project.name@
 #  description: @project.description@
 #  build: @project.version@
 #  java.version: @java.specification.version@
