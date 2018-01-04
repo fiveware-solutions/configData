@@ -1,16 +1,7 @@
 spring:
-  profiles.active: dev
+  profiles:
+    active: dev
 ---
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: false
-
-spring:
-  profiles: dev
-
 server:
   name: icaptor-web-server
   host: localhost
@@ -20,50 +11,52 @@ server:
 icaptor:
   seguranca:
     enable-https: false
-  origin-permitida: http://localhost:4200
-  elasticSearch: http://54.232.96.63:9200
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
-  instance:
-    preferIpAddress: false
-
-spring:
-  profiles: local
-
-server:
-  name: icaptor-web-server
-  host: localhost
-  port: 8014
-
-
-icaptor:
-  seguranca:
-    enable-https: false
-  origin-permitida: http://localhost:4200
-  elasticSearch: http://54.232.96.63:9200
-
----
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://54.232.96.63:8761/eureka}
-  instance:
-    preferIpAddress: true
-
-server:
-  name: icaptor-web-server
-  host: localhost
-  port: 8014
-
-icaptor:
-  seguranca:
-    enable-https: false
-  origin-permitida: http://54.232.96.63
-  elasticSearch: http://54.232.96.63:9200
+  origin-permitida: http://52.67.200.181
+  data-source:
+    host: http://52.67.200.181:8085
+  server:
+    host: http://52.67.200.181:8082
+  elasticSearch: http://52.67.200.181:9200
+  redis: http://52.67.200.181:8086
 
 spring:
   profiles: qa
+---
+server:
+  name: icaptor-web-server
+  host: localhost
+  port: 8014
+
+
+icaptor:
+  seguranca:
+    enable-https: false
+  origin-permitida: http://localhost:4200
+  data-source:
+    host: http://localhost:8085
+  server:
+    host: http://localhost:8082
+  elasticSearch: http://52.67.200.181:9200
+  redis: http://localhost:8086
+spring:
+  profiles: dev
+
+---
+server:
+  name: icaptor-web-server
+  host: localhost
+  port: 8014
+
+
+icaptor:
+  seguranca:
+    enable-https: false
+  data-source:
+    host: http://icaptor-data:8085
+  server:
+    host: http://icaptor-broker:8082
+  redis: http://icaptor-redis:8086
+  origin-permitida: http://52.67.141.87
+
+spring:
+  profiles: votorantim
