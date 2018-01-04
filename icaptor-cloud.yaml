@@ -1,21 +1,11 @@
-spring:
-  profiles.active: dev
-
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: false
-
-spring:
-  profiles: dev
-
 server:
   name: icaptor-server
   host: localhost
   port: 8082
+
+spring:
+  profile: dev
+  devtools.livereload.enabled: true
 
 io:
   worker.dir: ${user.home}/.icaptor-agent
@@ -24,25 +14,17 @@ io:
 
 
 icaptor:
+  data-source:
+    host: http://localhost:8085
   broker:
     user: guest
     pass: guest
     host: localhost
     port: 15672
     queue-send-schedular-time: 5000 #milli second
-  elasticSearch: http://54.232.96.63:9200
+  elasticSearch: http://52.67.200.181:9200
 
 ---
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
-  instance:
-    preferIpAddress: false
-
-spring:
-  profiles: local
-
 server:
   name: icaptor-server
   host: localhost
@@ -55,43 +37,14 @@ io:
 
 
 icaptor:
+  data-source:
+    host: http://icaptor-data:8085
   broker:
     user: guest
     pass: guest
-    host: icaptor-broker
+    host: 52.67.200.181
     port: 15672
     queue-send-schedular-time: 5000 #milli second
-  elasticSearch: http://54.232.96.63:9200
-
-
-
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://54.232.96.63:8761/eureka}
-  instance:
-    preferIpAddress: true
-
-server:
-  name: icaptor-server
-  host: localhost
-  port: 8082
 
 spring:
-  profiles: qa
-
-io:
-  worker.dir: ${user.home}/.icaptor-agent
-  worker.file: ${user.home}/.icaptor-out-file
-  file-read: ${user.home}/.icaptor-read-file
-
-
-icaptor:
-  broker:
-    user: guest
-    pass: guest
-    host: 54.232.96.63
-    port: 15672
-    queue-send-schedular-time: 5000 #milli second
-  elasticSearch: http://54.232.96.63:9200
+  profile: votorantim
