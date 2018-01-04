@@ -54,7 +54,7 @@ icaptor:
   data-source:
     host: http://icaptor-data:8085
   server:
-    host: http://icaptor-broker:8082
+    host: http://icaptor-cloud:8082
   redis: http://icaptor-redis:8086
   origin-permitida: http://18.231.43.107
 
