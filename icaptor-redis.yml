@@ -1,15 +1,18 @@
 spring:
   profiles.active: dev
 #logging:
-#  config: classpath:logback.xml
+#  config: classpath:logback-spring.xml
+---
+spring:
+  profiles: qa
+  redis:
+    hostname: 52.67.200.181
+    port: 6379
+server:
+  port : 8086
+  servlet-path: /
 
 ---
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: true
 spring:
   profiles: dev
   redis:
@@ -20,32 +23,20 @@ server:
   servlet-path: /
 
 ---
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
-  instance:
-    preferIpAddress: true
 spring:
-  profiles: local
+  profiles: test
   redis:
-    hostname: icaptor-alpine-redis
-    port: 6379
+      hostname: localhost
+      port: 6379
 server:
   port : 8086
   servlet-path: /
 
 ---
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://54.232.96.63:8761/eureka}
-  instance:
-    preferIpAddress: true
 spring:
-  profiles: qa
+  profiles: votorantim
   redis:
-      hostname: 54.232.96.63
+      hostname: 52.67.200.181
       port: 6379
 server:
   port : 8086

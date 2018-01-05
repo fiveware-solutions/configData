@@ -1,14 +1,5 @@
-spring:
-  profiles.active: dev
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
-  instance:
-    preferIpAddress: false
-
 server.port: 8020
+
 
 spring.http:
     multipart:
@@ -18,12 +9,18 @@ spring.http:
 icaptor:
   server:
     name: icaptor-server
+    host: localhost:8082
     ip: 127.0.0.1
+  data-source:
+    host: http://localhost:8085
   broker:
     user: guest
     pass: guest
     host: localhost
+    port: 30001
     queue.send.schedularTime: 5000 #milli second
+  elasticSearch: http://54.232.103.97:9200
+
 
 io:
   worker.dir: ${HOME}/.icaptor-agent
@@ -53,15 +50,9 @@ spring:
       settings:
         trace: false
         web-allow-others: true
-  profiles: dev
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://eureka-server:8761/eureka}
-  instance:
-    preferIpAddress: false
+  profile: dev
 
+---
 server.port: 8020
 
 spring.http:
@@ -72,69 +63,18 @@ spring.http:
 icaptor:
   server:
     name: icaptor-server
+    host: icaptor-cloud:8082
     ip: 127.0.0.1
+  data-source:
+    host: http://icaptor-data:8085
   broker:
     user: guest
     pass: guest
-    host: icaptor-broker
-    queue.send.schedularTime: 5000 #milli second
-
-io:
-  worker.dir: ${HOME}/.icaptor-agent
-  worker.file: ${HOME}/.icaptor-out-file
-  file-read: ${HOME}/.icaptor-read-file
-
-spring:
-  datasource:
-    url: jdbc:h2:mem:workflow;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
-    platform: h2
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: drop-create
-    properties:
-      hibernate:
-        show_sql: true
-        use_sql_comments: true
-        format_sql: true
-  h2:
-    console:
-      enabled: true
-      path: /console
-      settings:
-        trace: false
-        web-allow-others: true
-  profiles: local
-
----
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URI:http://54.232.96.63:8761/eureka}
-  instance:
-    preferIpAddress: true
-
-server.port: 8020
-
-spring.http:
-    multipart:
-        max-file-size: 1024MB
-        max-request-size: 1024MB
-
-icaptor:
-  server:
-    name: icaptor-server
-    ip: 127.0.0.1
-  broker:
-    user: guest
-    pass: guest
-    host: 16.231.43.79
+    host: 52.67.200.181
     port: 15672
     queue.send.schedularTime: 5000 #milli second
 
+
 io:
   worker.dir: ${HOME}/.icaptor-agent
   worker.file: ${HOME}/.icaptor-out-file
@@ -163,4 +103,4 @@ spring:
       settings:
         trace: false
         web-allow-others: true
-  profiles: qa
+  profile: votorantim
