@@ -60,5 +60,3 @@ icaptor:
 
 spring:
   profiles: votorantim
-
-management.security.enabled: false
