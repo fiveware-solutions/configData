@@ -1,113 +1,6 @@
-server.port: ${PORT:${SERVER_PORT:0}}
-
-spring.http:
-    multipart:
-        max-file-size: 1024MB
-        max-request-size: 1024MB
-
-icaptor:
-  server:
-    name: icaptor-server
-    host: http://localhost:8082
-    ip: 127.0.0.1
-  data-source:
-    host: http://localhost:8085
-  elasticSearch: http://52.67.200.181:9200
-  broker:
-    user: guest
-    pass: guest
-    host: 52.67.200.181
-    port: 30001
-    queue-send-schedular-time: 5000 #milli second
-  redis: http://52.67.200.181:8086
-
-  metrics-schedulle-time: 5000 #milli second
-
-io:
-  worker.dir: ${user.home}/.icaptor-agent
-  worker.file: ${user.home}/.icaptor-out-file
-  file-read: ${user.home}/.icaptor-read-file
-  bot.extension.file: .jar
-
-management:
-  security.enabled: false
-  context-path: /management
-
-
-#info.app:
-#  name: @project.name@
-#  description: @project.description@
-#  build: @project.version@
-#  java.version: @java.specification.version@
-
-endpoints:
-  info:
-    enabled: true
-    id: information
----
-server.port: ${PORT:${SERVER_PORT:0}}
-
-
-spring.http:
-    multipart:
-        max-file-size: 4024MB
-        max-request-size: 4024MB
 spring:
   profiles: dev
 
-icaptor:
-  server:
-    name: icaptor-server
-    host: localhost:8082
-    ip: localhost
-  data-source:
-    host: http://localhost:8085
-  elasticSearch: http://52.67.200.181:9200
-  redis: http://localhost:8086
-
-  broker:
-    user: guest
-    pass: guest
-    host: localhost
-    port: 15672
-    queue-send-schedular-time: 5000 #milli second
-
-  metrics-schedulle-time: 5000 #milli second
-io:
-  worker.dir: ${user.home}/.icaptor-agent
-  worker.file: ${user.home}/.icaptor-out-file
-  file-read: ${user.home}/.icaptor-read-file
-  bot.extension.file: .jar
-
-
-
-management:
-  security.enabled: false
-  context-path: /management
-
-
-#info.app:
-#  name: @project.name@
-#  description: @project.description@
-#  build: @project.version@
-#  java.version: @java.specification.version@
-
-endpoints:
-  info:
-    enabled: true
-    id: information
-
-
-# BANNER
-banner.charset: UTF-8 # Banner file encoding.
-banner.location: classpath:banner.txt # Banner file location.
-banner.image.location: classpath:banner.gif # Banner image file location (jpg/png can also be used).
-banner.image.width: # Width of the banner image in chars (default 76)
-banner.image.height: # Height of the banner image in chars (default based on image height)
-banner.image.margin: # Left hand image margin in chars (default 2)
-banner.image.invert: # If images should be inverted for dark terminal themes (default false)
-
----
 server.port: ${PORT:${SERVER_PORT:0}}
 
 
@@ -115,23 +8,21 @@ spring.http:
     multipart:
         max-file-size: 4024MB
         max-request-size: 4024MB
-spring:
-  profiles: votorantim
 
 icaptor:
   server:
     name: icaptor-server
-    host: 52.67.141.87:8082
+    host: icaptor-cloud:8082
     ip: localhost
   data-source:
-    host: http://52.67.141.87:8085
+    host: http://icaptor-data:8085
   elasticSearch: http://52.67.200.181:9200
-  redis: http://52.67.141.87:8086
+  redis: http://icaptor-redis:8086
 
   broker:
     user: guest
     pass: guest
-    host: 52.67.200.181
+    host: icaptor-broker
     port: 15672
     queue-send-schedular-time: 5000 #milli second
 
