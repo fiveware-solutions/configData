@@ -1,5 +1,5 @@
 spring:
-  profiles.active: dev
+  profiles: dev
 
 server:
   name: icaptor-monitoring
@@ -10,9 +10,6 @@ io:
   worker.dir: ${HOME}/.icaptor-agent
   worker.file: ${HOME}/.icaptor-out-file
   file-read: ${HOME}/.icaptor-read-file
-
-spring:
-  profile: dev
 
 icaptor:
   data-source:
