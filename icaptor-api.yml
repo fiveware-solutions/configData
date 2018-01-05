@@ -1,24 +1,6 @@
----
-server:
-  name: icaptor-web-server
-  host: localhost
-  port: 8014
-
-
-icaptor:
-  seguranca:
-    enable-https: false
-  origin-permitida: http://52.67.200.181
-  data-source:
-    host: http://52.67.200.181:8085
-  server:
-    host: http://52.67.200.181:8082
-  elasticSearch: http://52.67.200.181:9200
-  redis: http://52.67.200.181:8086
-
 spring:
-  profile: qa
----
+  profiles: dev
+
 server:
   name: icaptor-web-server
   host: localhost
@@ -30,30 +12,10 @@ icaptor:
     enable-https: false
   origin-permitida: http://localhost:4200
   data-source:
-    host: http://localhost:8085
-  server:
-    host: http://localhost:8082
-  elasticSearch: http://52.67.200.181:9200
-  redis: http://localhost:8086
-spring:
-  profile: dev
-
----
-server:
-  name: icaptor-web-server
-  host: localhost
-  port: 8014
-
-
-icaptor:
-  seguranca:
-    enable-https: false
-  data-source:
     host: http://icaptor-data:8085
   server:
     host: http://icaptor-cloud:8082
+  elasticSearch: http://52.67.200.181:9200
   redis: http://icaptor-redis:8086
-  origin-permitida: http://18.231.43.107
 
-spring:
-  profile: votorantim
+
