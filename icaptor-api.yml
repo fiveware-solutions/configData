@@ -56,7 +56,7 @@ icaptor:
   server:
     host: http://icaptor-cloud:8082
   redis: http://icaptor-redis:8086
-  origin-permitida: http://18.231.43.107
+  origin-permitida: http://18.231.43.108
 
 spring:
   profiles: votorantim
