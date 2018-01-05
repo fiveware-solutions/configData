@@ -8,8 +8,17 @@ icaptor:
   broker:
     user: guest
     pass: guest
-    host: localhost
+    host: icaptor-broker
     port: 15672
     queue-send-schedular-time: 5000 #milli second
   elasticSearch: http://52.67.200.181:9200
 
+server:
+  name: icaptor-server
+  host: localhost
+  port: 8082
+
+io:
+  worker.dir: ${user.home}/.icaptor-agent
+  worker.file: ${user.home}/.icaptor-out-file
+  file-read: ${user.home}/.icaptor-read-file
