@@ -11,34 +11,15 @@ io:
   worker.file: ${HOME}/.icaptor-out-file
   file-read: ${HOME}/.icaptor-read-file
 
----
-
 spring:
   profile: dev
 
 icaptor:
   data-source:
-    host: http://localhost:8085
-  broker:
-    user: guest
-    pass: guest
-    host: 52.67.200.181
-    port: 15672
-    queue-send-schedular-time: 5000 #milli second
-
----
-
-spring:
-  profile: votorantim
-
-
-icaptor:
-  data-source:
     host: http://icaptor-data:8085
-
   broker:
     user: guest
     pass: guest
-    host: 52.67.200.181
+    host: icaptor-broker
     port: 15672
     queue-send-schedular-time: 5000 #milli second
