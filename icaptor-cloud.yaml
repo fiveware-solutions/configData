@@ -1,5 +1,5 @@
 spring:
-  profiles.active: dev
+  profiles.active: local
 
 server:
   name: icaptor-server
@@ -11,11 +11,6 @@ io:
   worker.file: ${user.home}/.icaptor-out-file
   file-read: ${user.home}/.icaptor-read-file
 
----
-
-spring:
-  profile: dev
-  devtools.livereload.enabled: true
 
 icaptor:
   data-source:
@@ -28,18 +23,5 @@ icaptor:
     queue-send-schedular-time: 5000 #milli second
   elasticSearch: http://52.67.200.181:9200
 
----
 
-spring:
-  profile: votorantim
-
-icaptor:
-  data-source:
-    host: http://icaptor-data:8085
-  broker:
-    user: guest
-    pass: guest
-    host: 52.67.200.181
-    port: 15672
-    queue-send-schedular-time: 5000 #milli second
 
