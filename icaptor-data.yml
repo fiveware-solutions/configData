@@ -56,4 +56,3 @@ icaptor:
     host: http://localhost:8082
   elasticSearch: http://52.67.200.181:9200
   redis: http://localhost:8086
-spring.level.log: local
