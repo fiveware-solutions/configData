@@ -17,7 +17,7 @@ icaptor:
     user: guest
     pass: guest
     host: localhost
-    port: 30001
+    port: 15672
     queue.send.schedularTime: 5000 #milli second
   elasticSearch: http://54.232.103.97:9200
   redis: http://localhost:8086
