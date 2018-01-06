@@ -30,8 +30,14 @@ flyway:
     validateOnMigrate: true
 
 management:
-  security.enabled: false
+  security:
+    role: ADMIN
+    enabled: false
   context-path: /management
+
+
+
+
 
 
 #info.app:
@@ -41,8 +47,10 @@ management:
 #  java.version: @java.specification.version@
 
 endpoints:
+  enabled: false
   info:
     enabled: true
+  health.enabled: true
     id: information
 
 
@@ -56,3 +64,6 @@ icaptor:
     host: http://localhost:8082
   elasticSearch: http://52.67.200.181:9200
   redis: http://localhost:8086
+
+
+
