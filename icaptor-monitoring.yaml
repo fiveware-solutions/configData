@@ -22,3 +22,4 @@ icaptor:
     port: 15672
     queue-send-schedular-time: 5000 #milli second
   elasticSearch: http://52.67.200.181:9200
+  redis: http://localhost:8086
