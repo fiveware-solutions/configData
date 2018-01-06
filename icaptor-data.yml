@@ -23,7 +23,7 @@ spring:
     date-format: dd/MM/yyyy
 
   data.rest.detection-strategy: annotated
-  profiles.active: dev
+  profiles.active: local
 
 flyway:
     enabled: "true"
