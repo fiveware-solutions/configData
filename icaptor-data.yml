@@ -23,7 +23,7 @@ spring:
     date-format: dd/MM/yyyy
 
   data.rest.detection-strategy: annotated
-  profiles.active: local
+  profiles.active: dev
 
 flyway:
     enabled: "true"
@@ -37,9 +37,6 @@ management:
 
 
 
-
-
-
 #info.app:
 #  name: @project.name@
 #  description: @project.description@
@@ -47,10 +44,8 @@ management:
 #  java.version: @java.specification.version@
 
 endpoints:
-  enabled: false
   info:
     enabled: true
-  health.enabled: true
     id: information
 
 
