@@ -17,3 +17,6 @@ icaptor:
   redis: http://localhost:8086
 spring:
   profile: local
+
+
+origin-permitida: http://localhost:4200
