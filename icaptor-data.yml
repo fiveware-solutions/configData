@@ -30,11 +30,8 @@ flyway:
     validateOnMigrate: true
 
 management:
-  security:
-    role: ADMIN
-    enabled: false
+  security.enabled: false
   context-path: /management
-
 
 
 #info.app:
