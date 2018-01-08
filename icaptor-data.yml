@@ -44,3 +44,13 @@ endpoints:
   info:
     enabled: true
     id: information
+
+
+icaptor:
+  data-source:
+    host: http://icaptor-data:8085
+  broker:
+    user: guest
+    pass: guest
+    host: icaptor-broker
+    port: 15672
