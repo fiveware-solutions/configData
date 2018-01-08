@@ -8,6 +8,8 @@ icaptor:
     host: http://icaptor-data:8085
   server:
     host: http://icaptor-cloud:8082
+    name: icaptor-server
+    ip: 127.0.0.1
   broker:
     user: guest
     pass: guest
