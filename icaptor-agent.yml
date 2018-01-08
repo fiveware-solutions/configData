@@ -18,6 +18,7 @@ icaptor:
     host: http://icaptor-data:8085
   elasticSearch: http://52.67.200.181:9200
   redis: http://icaptor-redis:8086
+  user.id: 1
 
   broker:
     user: guest
@@ -33,7 +34,7 @@ io:
   file-read: ${user.home}/.icaptor-read-file
   bot.extension.file: .jar
 
-  user.id: 1
+
 
 
 management:
