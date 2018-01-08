@@ -1,21 +1,21 @@
-spring:
-  profiles: dev
-
 server:
   name: icaptor-web-server
   host: localhost
   port: 8014
 
-
 icaptor:
-  seguranca:
-    enable-https: false
-  origin-permitida: http://localhost:4200
   data-source:
     host: http://icaptor-data:8085
   server:
     host: http://icaptor-cloud:8082
+  broker:
+    user: guest
+    pass: guest
+    host: icaptor-broker
+    port: 15672
+    queue-send-schedular-time: 5000 #milli second
   elasticSearch: http://52.67.200.181:9200
   redis: http://icaptor-redis:8086
-
-
+  seguranca:
+    enable-https: false
+  origin-permitida: http://localhost:4200
