@@ -33,6 +33,7 @@ io:
   file-read: ${user.home}/.icaptor-read-file
   bot.extension.file: .jar
 
+  user.id: 1
 
 
 management:
