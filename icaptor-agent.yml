@@ -19,7 +19,7 @@ icaptor:
   elasticSearch: http://52.67.200.181:9200
   redis: http://icaptor-redis:8086
   user.id: 1
-
+  metrics-schedulle-time:
   broker:
     user: guest
     pass: guest
