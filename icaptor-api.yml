@@ -4,6 +4,7 @@ server:
   host: localhost
   port: 8014
 
+management.security.enabled: false
 
 icaptor:
   seguranca:
