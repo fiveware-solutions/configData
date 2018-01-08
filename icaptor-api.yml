@@ -3,6 +3,9 @@ server:
   host: localhost
   port: 8014
 
+management.security.enabled: false
+
+
 icaptor:
   data-source:
     host: http://icaptor-data:8085
