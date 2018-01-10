@@ -44,3 +44,16 @@ endpoints:
   info:
     enabled: true
     id: information
+
+
+icaptor:
+  seguranca:
+    enable-https: false
+  origin-permitida: http://18.231.43.107
+  data-source:
+    host: http://icaptor-data:8085
+  server:
+    host: http://icaptor-cloud:8082
+  elasticSearch: http://52.67.200.181:9200
+  redis: http://icaptor-redis:8086
+  turn.on.elasticSearch: false

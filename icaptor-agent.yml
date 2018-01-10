@@ -18,15 +18,18 @@ icaptor:
     host: http://icaptor-data:8085
   elasticSearch: http://52.67.200.181:9200
   redis: http://icaptor-redis:8086
+  turn.on.elasticSearch: false
 
   broker:
     user: guest
     pass: guest
-    host: icaptor-broker
+    host: 52.67.200.181
     port: 15672
     queue-send-schedular-time: 5000 #milli second
 
   metrics-schedulle-time: 5000 #milli second
+  user.id: 1
+
 io:
   worker.dir: ${user.home}/.icaptor-agent
   worker.file: ${user.home}/.icaptor-out-file

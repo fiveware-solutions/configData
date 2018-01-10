@@ -11,12 +11,16 @@ io:
   worker.file: ${HOME}/.icaptor-out-file
   file-read: ${HOME}/.icaptor-read-file
 
+
 icaptor:
   data-source:
     host: http://icaptor-data:8085
   broker:
     user: guest
     pass: guest
-    host: icaptor-broker
+    host: 52.67.200.181
     port: 15672
     queue-send-schedular-time: 5000 #milli second
+  elasticSearch: http://52.67.200.181:9200
+  redis: http://icaptor-redis:8086
+  turn.on.elasticSearch: false

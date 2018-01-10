@@ -17,5 +17,4 @@ icaptor:
     host: http://icaptor-cloud:8082
   elasticSearch: http://52.67.200.181:9200
   redis: http://icaptor-redis:8086
-
-
+  turn.on.elasticSearch: false

@@ -1,18 +1,4 @@
-spring:
-  profile: dev
-  devtools.livereload.enabled: true
-
-icaptor:
-  data-source:
-    host: http://icaptor-data:8085
-  broker:
-    user: guest
-    pass: guest
-    host: icaptor-broker
-    port: 15672
-    queue-send-schedular-time: 5000 #milli second
-  elasticSearch: http://52.67.200.181:9200
-
+spring.profiles: develop
 server:
   name: icaptor-server
   host: localhost
@@ -22,3 +8,19 @@ io:
   worker.dir: ${user.home}/.icaptor-agent
   worker.file: ${user.home}/.icaptor-out-file
   file-read: ${user.home}/.icaptor-read-file
+
+
+icaptor:
+  data-source:
+    host: http://icaptor-data:8085
+  server:
+    host: http://icaptor-cloud:8082
+  broker:
+    user: guest
+    pass: guest
+    host: 52.67.200.181
+    port: 15672
+    queue-send-schedular-time: 5000 #milli second
+  elasticSearch: http://52.67.200.181:9200
+  redis: http://icaptor-redis:8086
+  turn.on.elasticSearch: false
