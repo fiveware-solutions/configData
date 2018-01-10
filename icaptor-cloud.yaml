@@ -1,4 +1,3 @@
-spring.profiles: develop
 server:
   name: icaptor-server
   host: localhost
