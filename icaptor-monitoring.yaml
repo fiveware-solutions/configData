@@ -1,6 +1,3 @@
-spring:
-  profiles: dev
-
 server:
   name: icaptor-monitoring
   host: localhost

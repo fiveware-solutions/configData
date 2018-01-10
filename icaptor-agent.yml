@@ -1,6 +1,3 @@
-spring:
-  profiles: dev
-
 server.port: ${PORT:${SERVER_PORT:0}}
 
 
@@ -35,6 +32,7 @@ io:
   worker.file: ${user.home}/.icaptor-out-file
   file-read: ${user.home}/.icaptor-read-file
   bot.extension.file: .jar
+
 
 
 
