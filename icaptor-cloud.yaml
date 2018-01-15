@@ -17,7 +17,7 @@ icaptor:
   broker:
     user: guest
     pass: guest
-    host: 52.67.200.181
+    host: icaptor-broker
     port: 15672
     queue-send-schedular-time: 5000 #milli second
   elasticSearch: http://52.67.200.181:9200
