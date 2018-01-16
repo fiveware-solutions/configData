@@ -25,3 +25,5 @@ icaptor:
   seguranca:
     enable-https: false
   origin-permitida: http://localhost:4200
+
+spring.profiles.active: local
