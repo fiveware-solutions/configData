@@ -3,7 +3,7 @@ server:
   
 eureka:
   server:
-    enableSelfPreservation: true
+    enableSelfPreservation: false
   instance:
     appname: eureka-server
     preferIpAddress: true
@@ -11,4 +11,4 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://52.67.141.87:8761/eureka/
