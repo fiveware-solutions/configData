@@ -21,5 +21,4 @@ icaptor:
   seguranca:
     enable-https: false
   origin-permitida: http://18.231.82.104
-
 spring.profiles.active: local
