@@ -20,6 +20,6 @@ icaptor:
   turn.on.elasticSearch: false
   seguranca:
     enable-https: false
-  origin-permitida: http://18.231.43.107
+  origin-permitida: http://18.231.82.104
 
 spring.profiles.active: local
