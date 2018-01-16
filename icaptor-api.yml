@@ -7,10 +7,7 @@ management.security.enabled: false
 
 
 icaptor:
-  data-source:
-    host: http://icaptor-data:8085
   server:
-    host: http://icaptor-cloud:8082
     name: icaptor-server
     ip: 127.0.0.1
   broker:
@@ -20,7 +17,6 @@ icaptor:
     port: 15672
     queue-send-schedular-time: 5000 #milli second
   elasticSearch: http://52.67.200.181:9200
-  redis: http://icaptor-redis:8086
   turn.on.elasticSearch: false
   seguranca:
     enable-https: false

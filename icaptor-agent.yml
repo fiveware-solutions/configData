@@ -9,12 +9,8 @@ spring.http:
 icaptor:
   server:
     name: icaptor-server
-    host: icaptor-cloud:8082
     ip: localhost
-  data-source:
-    host: http://icaptor-data:8085
   elasticSearch: http://52.67.200.181:9200
-  redis: http://icaptor-redis:8086
   turn.on.elasticSearch: false
 
   broker:
