@@ -4,7 +4,7 @@ server:
 
 spring:
   redis:
-    hostname: icaptor-alpine-redis
+    hostname: 52.67.200.181
     port: 6379
 
 icaptor.turn.on.elasticSearch: false
