@@ -1,6 +1,6 @@
 server:
   host: localhost
-  port: 8085
+  port: ${PORT:${SERVER_PORT:0}}
 
 spring:
   datasource:
