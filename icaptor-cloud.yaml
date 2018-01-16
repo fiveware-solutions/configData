@@ -1,7 +1,7 @@
 server:
   name: icaptor-server
   host: localhost
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8082
 
 io:
   worker.dir: ${user.home}/.icaptor-agent
