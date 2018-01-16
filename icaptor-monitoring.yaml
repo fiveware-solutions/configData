@@ -1,7 +1,7 @@
 server:
   name: icaptor-monitoring
   host: localhost
-  port: 8090
+  port: ${PORT:${SERVER_PORT:0}}
 
 io:
   worker.dir: ${HOME}/.icaptor-agent
