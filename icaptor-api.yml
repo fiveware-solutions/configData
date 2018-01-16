@@ -1,7 +1,7 @@
 server:
   name: icaptor-web-server
   host: localhost
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8014
 
 management.security.enabled: false
 
