@@ -12,6 +12,7 @@ icaptor:
   server:
     name: icaptor-server
     ip: localhost
+    host: http://52.67.141.87:8082
   elasticSearch: http://52.67.200.181:9200
   turn.on.elasticSearch: false
 
