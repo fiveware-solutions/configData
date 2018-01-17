@@ -12,6 +12,7 @@ icaptor:
   server:
     name: icaptor-server
     ip: 127.0.0.1
+    host: http://icaptor-cloud:8082
   broker:
     user: guest
     pass: guest
