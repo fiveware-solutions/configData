@@ -7,12 +7,12 @@ management.security.enabled: false
 
 
 icaptor:
-  data-source.host: http://icaptor-data:8085
-  redis: http://icaptor-redis:8086
+  data-source.host: http://52.67.141.87:8085
+  redis: http://52.67.141.87:8086
   server:
     name: icaptor-server
     ip: 127.0.0.1
-    host: http://icaptor-cloud:8082
+    host: http://52.67.141.87:8082
   broker:
     user: guest
     pass: guest
