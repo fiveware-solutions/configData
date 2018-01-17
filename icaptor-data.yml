@@ -53,3 +53,4 @@ icaptor:
   elasticSearch: http://52.67.200.181:9200
   turn.on.elasticSearch: false
   data-source.host: http://icaptor-data:8085
+  redis: http://icaptor-redis:8086
