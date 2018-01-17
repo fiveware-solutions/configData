@@ -7,6 +7,8 @@ spring.http:
         max-request-size: 4024MB
 
 icaptor:
+  data-source.host: http://52.67.141.87:8085
+  redis: http://52.67.141.87:8086
   server:
     name: icaptor-server
     ip: localhost
