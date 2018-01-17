@@ -1,6 +1,6 @@
 server:
   host: localhost
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8085
 
 spring:
   datasource:
@@ -52,3 +52,4 @@ icaptor:
   origin-permitida: http://18.231.43.107
   elasticSearch: http://52.67.200.181:9200
   turn.on.elasticSearch: false
+  data-source.host: http://icaptor-data:8085

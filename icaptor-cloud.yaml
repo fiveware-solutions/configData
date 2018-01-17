@@ -1,7 +1,7 @@
 server:
   name: icaptor-server
   host: localhost
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8082
 
 io:
   worker.dir: ${user.home}/.icaptor-agent
@@ -10,6 +10,7 @@ io:
 
 
 icaptor:
+  data-source.host: http://icaptor-data:8085
   broker:
     user: guest
     pass: guest

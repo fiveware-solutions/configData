@@ -1,19 +1,20 @@
 server:
   name: icaptor-web-server
   host: localhost
-  port: ${PORT:${SERVER_PORT:0}}
+  port: 8014
 
 management.security.enabled: false
 
 
 icaptor:
+  data-source.host: http://icaptor-data:8085
   server:
     name: icaptor-server
     ip: 127.0.0.1
   broker:
     user: guest
     pass: guest
-    host: icaptor-broker
+    host: 52.67.200.181
     port: 15672
     queue-send-schedular-time: 5000 #milli second
   elasticSearch: http://52.67.200.181:9200
@@ -21,5 +22,4 @@ icaptor:
   seguranca:
     enable-https: false
   origin-permitida: http://localhost:4200
-
 spring.profiles.active: local
