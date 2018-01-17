@@ -12,6 +12,7 @@ io:
 icaptor:
   data-source.host: http://icaptor-data:8085
   redis: http://icaptor-redis:8086
+  server.host: http://icaptor-cloud:8082
   broker:
     user: guest
     pass: guest
