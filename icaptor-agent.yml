@@ -15,6 +15,7 @@ icaptor:
     host: http://52.67.141.87:8082
   elasticSearch: http://52.67.200.181:9200
   turn.on.elasticSearch: false
+  local-address: false
 
   broker:
     user: guest
