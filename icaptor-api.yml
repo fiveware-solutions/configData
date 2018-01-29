@@ -18,6 +18,5 @@ icaptor:
     ip: 127.0.0.1
   elasticSearch: http://52.67.200.181:9200
   redis: http://localhost:8086
+  turn.on.elasticSearch: false
 
-spring:
-  profile: local

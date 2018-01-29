@@ -22,6 +22,7 @@ icaptor:
   redis: http://localhost:8086
   metrics-schedulle-time: 5000 #milli second
   user.id: 1
+  turn.on.elasticSearch: false
 
 io:
   worker.dir: ${user.home}/.icaptor-agent

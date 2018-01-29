@@ -6,3 +6,5 @@ spring:
 server:
   port : 8086
   servlet-path: /
+
+icaptor.turn.on.elasticSearch: false

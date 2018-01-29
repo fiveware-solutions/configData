@@ -21,6 +21,7 @@ icaptor:
     queue.send.schedularTime: 5000 #milli second
   elasticSearch: http://54.232.103.97:9200
   redis: http://localhost:8086
+  turn.on.elasticSearch: false
 
 
 io:
@@ -51,5 +52,3 @@ spring:
       settings:
         trace: false
         web-allow-others: true
-  profile: local
-
