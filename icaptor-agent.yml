@@ -26,6 +26,8 @@ icaptor:
     queue-send-schedular-time: 5000 #milli second
 
   metrics-schedulle-time: 5000 #milli second
+  keep-alive-time-seconds: 3000 #milli second
+
   user.id: 3
 
 io:
