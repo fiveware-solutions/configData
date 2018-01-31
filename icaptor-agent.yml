@@ -11,7 +11,8 @@ icaptor:
   redis: http://icaptor-redis:8086
   server:
     name: icaptor-server
-    ip: localhost
+    host: http://icaptor-cloud:8082
+    ip: 127.0.0.1
   elasticSearch: http://52.67.200.181:9200
   turn.on.elasticSearch: false
 
@@ -26,6 +27,7 @@ icaptor:
   keep-alive-time-seconds: 3000 #milli second
 
   user.id: 1
+  local-address: true
 
 io:
   worker.dir: ${user.home}/.icaptor-agent
