@@ -28,7 +28,7 @@ icaptor:
   metrics-schedulle-time: 5000 #milli second
   keep-alive-time-seconds: 3000 #milli second
 
-  user.id: 3
+  user.id: 4
 
 io:
   worker.dir: ${user.home}/.icaptor-agent
