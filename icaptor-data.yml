@@ -33,6 +33,16 @@ management:
   security.enabled: false
   context-path: /management
 
+endpoints:
+   logfile:
+      sensitive: false
+   restart.enabled: true
+   info:
+      enabled: true
+      id: information
+logging:
+    file: ${user.home}/logs/${spring.application.name}.log
+
 
 #info.app:
 #  name: @project.name@
@@ -40,10 +50,6 @@ management:
 #  build: @project.version@
 #  java.version: @java.specification.version@
 
-endpoints:
-  info:
-    enabled: true
-    id: information
 
 
 icaptor:

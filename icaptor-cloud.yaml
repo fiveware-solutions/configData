@@ -3,10 +3,7 @@ server:
   host: localhost
   port: 8082
 
-io:
-  worker.dir: ${user.home}/.icaptor-agent
-  worker.file: ${user.home}/.icaptor-out-file
-  file-read: ${user.home}/.icaptor-read-file
+
 
 
 icaptor:
@@ -21,3 +18,21 @@ icaptor:
     queue-send-schedular-time: 5000 #milli second
   elasticSearch: http://52.67.200.181:9200
   turn.on.elasticSearch: false
+  io:
+    worker.dir: ${user.home}/.icaptor-agent
+    worker.file: ${user.home}/.icaptor-out-file
+    file-read: ${user.home}/.icaptor-read-file
+
+management:
+  security.enabled: false
+  context-path: /management
+
+endpoints:
+   logfile:
+      sensitive: false
+   restart.enabled: true
+   info:
+      enabled: true
+      id: information
+logging:
+    file: ${user.home}/logs/${spring.application.name}.log

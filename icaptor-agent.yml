@@ -27,20 +27,28 @@ icaptor:
   metrics-schedulle-time: 5000 #milli second
   keep-alive-time-seconds: 3000 #milli second
 
-  user.id: 1
+  user.id: 3
 
-io:
-  worker.dir: ${user.home}/.icaptor-agent
-  worker.file: ${user.home}/.icaptor-out-file
-  file-read: ${user.home}/.icaptor-read-file
-  bot.extension.file: .jar
-
-
+  io:
+    worker.dir: ${user.home}/.icaptor-agent
+    worker.file: ${user.home}/.icaptor-out-file
+    file-read: ${user.home}/.icaptor-read-file
+    bot.extension.file: .jar
 
 
 management:
   security.enabled: false
   context-path: /management
+
+endpoints:
+   logfile:
+      sensitive: false
+   restart.enabled: true
+   info:
+      enabled: true
+      id: information
+logging:
+    file: ${user.home}/logs/${spring.application.name}.log
 
 
 #info.app:
@@ -49,10 +57,6 @@ management:
 #  build: @project.version@
 #  java.version: @java.specification.version@
 
-endpoints:
-  info:
-    enabled: true
-    id: information
 
 
 # BANNER

@@ -8,3 +8,18 @@ spring:
     port: 6379
 
 icaptor.turn.on.elasticSearch: false
+
+
+management:
+  security.enabled: false
+  context-path: /management
+
+endpoints:
+   logfile:
+      sensitive: false
+   restart.enabled: true
+   info:
+      enabled: true
+      id: information
+logging:
+    file: ${user.home}/logs/${spring.application.name}.log

@@ -30,3 +30,17 @@ spring:
         multipart:
             max-file-size: 200MB
             max-request-size: 200MB
+
+management:
+  security.enabled: false
+  context-path: /management
+
+endpoints:
+   logfile:
+      sensitive: false
+   restart.enabled: true
+   info:
+      enabled: true
+      id: information
+logging:
+    file: ${user.home}/logs/${spring.application.name}.log
