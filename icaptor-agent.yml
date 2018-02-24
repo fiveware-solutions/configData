@@ -7,20 +7,20 @@ spring.http:
         max-request-size: 4024MB
 
 icaptor:
-  data-source.host: http://52.67.141.87:8085
-  redis: http://52.67.141.87:8086
+  data-source.host: http://18.231.116.132:8085
+  redis: http://18.231.116.132:8086
   server:
     name: icaptor-server
     ip: localhost
-    host: http://52.67.141.87:8082
-  elasticSearch: http://52.67.200.181:9200
+    host: http://18.231.116.132:8082
+  elasticSearch: http://18.231.80.133:9200
   turn.on.elasticSearch: false
   local-address: false
 
   broker:
     user: guest
     pass: guest
-    host: 52.67.200.181
+    host: 18.231.80.133
     port: 15672
     queue-send-schedular-time: 5000 #milli second
 

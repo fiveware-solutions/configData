@@ -7,24 +7,24 @@ management.security.enabled: false
 
 
 icaptor:
-  data-source.host: http://52.67.141.87:8085
-  redis: http://52.67.141.87:8086
+  data-source.host: http://18.231.116.132:8085
+  redis: http://18.231.116.132:8086
   server:
     name: icaptor-server
     ip: 127.0.0.1
-    host: http://52.67.141.87:8082
+    host: http://18.231.116.132:8082
   broker:
     user: guest
     pass: guest
-    host: 52.67.200.181
+    host: 18.231.80.133
     port: 15672
     queue-send-schedular-time: 5000 #milli second
-  elasticSearch: http://52.67.200.181:9200
+  elasticSearch: http://18.231.80.133:9200
   turn.on.elasticSearch: false
   seguranca:
     enable-https: false
-  origin-permitida: http://localhost:4200,http://18.231.82.104,http://177.53.16.82:4200
-  monitoring: http://52.67.141.87:8090
+  origin-permitida: http://18.231.120.1
+  monitoring: http://18.231.116.132:8090
 
 spring:
     http:

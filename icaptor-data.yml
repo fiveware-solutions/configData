@@ -4,7 +4,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://52.67.200.181:3306/icaptor?createDatabaseIfNotExist=true&useSSL=false
+    url: jdbc:mysql://18.231.80.133:3306/icaptor?createDatabaseIfNotExist=true&useSSL=false
     username: root
     password: root
     driverClassName: com.mysql.jdbc.Driver
@@ -56,7 +56,7 @@ icaptor:
   seguranca:
     enable-https: false
   origin-permitida: http://18.231.43.107
-  elasticSearch: http://52.67.200.181:9200
+  elasticSearch: http://18.231.80.133:9200
   turn.on.elasticSearch: false
   data-source.host: http://icaptor-data:8085
   redis: http://icaptor-redis:8086
